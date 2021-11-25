@@ -11,6 +11,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <!--Styles-->
     <link rel="stylesheet" href="style.css">
+    <style>
+        .container_cards{
+            --card-size: 240px;
+            /*Display*/
+            display: grid;
+            grid-template-columns: repeat(auto-fill,var(--card-size));
+            gap: 24px;
+            place-content: center;
+        }
+        .contiainer_cards_card{
+            width:var(--card-size)
+        }
+        .container_cards_card img{
+            width:100%;
+            height: var(--card-size);
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .container_cards_card_info{
+            /*Display*/
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        .container_cards_card_info_logo img{
+            width:36px;
+            height: 36px;
+        }
+        .container_cards_card_info_price p:nth-child(1){
+            /*Text*/
+            font-weight: bold;
+            font-size: var(--md);
+            /*Box*/
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+        .container_cards_card_info_price p:nth-child(2){
+            /*Text*/
+            font-size: var(--sm);
+            color: var(--very-light-pink);
+            /*Box*/
+        }
+        /*Restar*/
+        figure{
+            margin: 0;
+        }
+        /*Media*/
+        @media (max-width: 640px){
+            .container_cards{
+                --card-size: 140px;
+            }
+        }
+    </style>
 </head>
 <body>
     <main class="container">
