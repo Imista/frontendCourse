@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <!--Style-->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root{
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body{
+            margin: 0;
+        }
+        /*Login*/
+        .login{
+            /*Box*/
+            width: 100%;
+            height: 100vh;
+            /*Display*/
+            display: grid;
+            place-items: center;
+        }
+        .login_form{
+            /*display*/
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            /*Box*/
+            width: 300px;
+        }
+        .login_form_img{
+            /*Box*/
+            width: 150px;
+            margin-bottom: 48px;
+            /*Display*/
+            display: none;  
+            justify-self: center;
+        }
+        .login_form_data{
+            display:flex;
+            flex-direction: column;
+        }
+        .login_form_label{
+            /*Text*/
+            font-size:var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .login_form_input{
+            /*Box*/
+            background-color: var(--text-input-field);
+            border: none;
+            border-radius: 8px;
+            height: 32px;
+            padding: 8px;
+            margin-bottom: 12px;
+            /*Text*/
+            font-size: var(--md);
+        }
+        .login_form_input:nth-last-of-type(2){
+            margin-bottom: 32px;
+        }
+        .login_form_forgot{
+            /*Text*/
+            color: var(--hospital-green);
+            font-size: var(--sm);
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 52px;
+        }
+        .login_button{
+            /*Box*/
+            border-radius: 8px;
+            width: 100%;
+            height: 52px;
+            margin-bottom: 32px;
+            /*Cursor*/
+            cursor: pointer;
+            /*Text*/
+            font-size: var(--md);
+            font-weight: bold;
+        }
+        .primary_button{
+            /*Box*/
+            background-color: var(--hospital-green);
+            border: none;
+            color: var(--white);
+
+        }
+        .secondary_button{
+            /*Box*/
+            background-color: var(--white);/**/
+            border: 1px solid var(--hospital-green);/**/
+            color: var(--hospital-green);/**/
+        }
+        @media (max-width: 640px){
+            .login_form_img{
+                display: block;
+            }
+            .login_down{
+                position: absolute;
+                width: inherit;
+                bottom: 0;
+                margin-bottom: 24px;
+            }
+        }
+    </style>
+    <!--End style-->
+    <title>Document</title>
+</head>
+<body>
+    <main class="login">
+        <div class="login_form">
+            <img src="logos/logo_yard_sale.svg" alt="Logo" class="login_form_img">
+            <!--Form-->
+            <form action="/" class="login_form_data">
+                <label for="email" class="login_form_label">Email address</label>
+                <input type="email" id="email" placeholder="example@gmail.com" class="login_form_input login_form_input_email">
+
+                <label for="password" class="login_form_label">Password</label>
+                <input type="password" id="password" placeholder="*********" class="login_form_input login_form_input_password">
+
+                <input type="submit" class="login_button primary_button" value="Log in">
+                <a href="/" class="login_form_forgot">Forgot my password</a>
+            </form>
+            <input type="submit" class="login_button secondary_button login_down" value="Sing up">
+
+        </div>
+    </main>
+</body>
+</html>
