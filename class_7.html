@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--Font-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+     <!--Styles-->
+     <link rel="stylesheet" href="style.css">
+     <style>
+        main{
+            --box-size: 400px;
+            width: 100%;
+            height: 100vh;
+            /*Display*/
+            display: grid;
+            place-content: center;
+        }
+         .myOrder{
+            width: var(--box-size);
+        }
+        .myOrder_title{
+            /*Text*/
+            font-size: var(--lg);
+            margin-bottom: 32px;
+            font-weight: 700;
+        }
+        .myOrder_data{
+            /*Display*/
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /*Box*/
+            padding: 0 24px;
+            background-color: var(--text-input-field);
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+        .myOrder_data p{
+            margin: 8px 0;
+        }
+        .myOrder_data p:nth-of-type(1){
+            font-size: var(--md);
+            font-weight: bold;
+        }
+        .myOrder_data p:nth-of-type(2){
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+        }
+        .myOrder_articles_object{
+            /*Box*/
+            width: 100%;
+            margin-bottom: 16px;
+            /*Display*/
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .myOrder_articles_object_img img{
+            width: 72px;
+            height: 72px;
+            flex-basis: 18%;
+            border-radius: 20px;
+        }
+        .myOrder_articles_object p:nth-child(2){
+            flex-basis: 60%;
+            color: var(--very-light-pink);
+        }
+        .myOrder_articles_object p:nth-child(3){
+            flex-basis: 18%;
+            /*Text*/
+            font-weight: bold;
+            font-size: var(--md);
+        }
+     </style>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="myOrder">
+            <h1 class="myOrder_title">My orders</h1>
+            <div class="myOrder_data">
+                <div>
+                    <p>27.11.2021</p>
+                    <p>4 articles</p>
+                </div>
+                <div>
+                    <p>$6.00 M</p>
+                </div>
+            </div>
+            <div class="myOrder_articles">
+                <div class="myOrder_articles_object">
+                    <figure class="myOrder_articles_object_img">
+                        <img src="https://i.ibb.co/JBDGtGq/Rick.jpg" alt="">
+                    </figure>
+                    <p>Rick's NTF</p>
+                    <p>$1.5 M</p>
+                </div>
+                <div class="myOrder_articles_object">
+                    <figure class="myOrder_articles_object_img">
+                        <img src="https://i.ibb.co/JBDGtGq/Rick.jpg" alt="">
+                    </figure>
+                    <p>Rick's NTF</p>
+                    <p>$1.5 M</p>
+                </div>
+                <div class="myOrder_articles_object">
+                    <figure class="myOrder_articles_object_img">
+                        <img src="https://i.ibb.co/JBDGtGq/Rick.jpg" alt="">
+                    </figure>
+                    <p>Rick's NTF</p>
+                    <p>$1.5 M</p>
+                </div>
+                <div class="myOrder_articles_object">
+                    <figure class="myOrder_articles_object_img">
+                        <img src="https://i.ibb.co/JBDGtGq/Rick.jpg" alt="">
+                    </figure>
+                    <p>Rick's NTF</p>
+                    <p>$1.5 M</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
