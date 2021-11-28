@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <!--Styles-->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /*Button*/
+        .button{
+            /*Box*/
+            border-radius: 8px;
+            width: 100%;
+            height: 52px;
+            margin-bottom: 32px;
+            /*Cursor*/
+            cursor: pointer;
+            /*Text*/
+            font-size: var(--md);
+            font-weight: bold;
+        }
+        .primary_button{
+            /*Box*/
+            background-color: var(--hospital-green);
+            border: none;
+            color: var(--white);
+        }
+        .shp_cart_footer_button{
+            /*Display*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /*Product*/
+        .shp_cart{
+            /*Box*/
+            --content-width: 360px;
+            width: var(--content-width);
+            height: 100vh;
+            padding: 0 8px;
+            box-sizing: border-box;
+            /*Position*/
+            position: absolute;
+            right: 0;
+            /*Display*/
+            display: flex;
+            flex-direction: column;
+        }
+        .shp_cart_head{
+            /*Text*/
+            font-weight: bold;
+            font-size: var(--lg);
+            /*Display*/
+            display: flex;
+            flex-direction: row;
+        }
+        .shp_cart_head img{
+            transform: rotate(180deg);
+            margin-right: 24px;
+            cursor: pointer;
+        }
+        /*Shopping car---------------------------*/
+        .shp_cart_footer_data{
+            /*Display*/
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /*Box*/
+            padding: 0 24px;
+            background-color: var(--text-input-field);
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+        /*Article*/
+        .shp_cart_footer_data p{
+            margin: 8px 0;
+        }
+        .shp_cart_footer_data p:nth-of-type(1){
+            font-size: var(--md);
+            font-weight: bold;
+        }
+        .shp_cart_footer_data p:nth-of-type(2){
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+        }
+        .shp_cart_articles_object{
+            /*Box*/
+            width: 100%;
+            margin-bottom: 16px;
+            /*Display*/
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .shp_cart_articles_object_img img{
+            width: 72px;
+            height: 72px;
+            flex-basis: 20%;
+            border-radius: 20px;
+        }
+        .shp_cart_articles_object p:nth-child(2){
+            flex-basis: 40%;
+            color: var(--very-light-pink);
+        }
+        .shp_cart_articles_object p:nth-child(3){
+            flex-basis: 20%;
+            /*Text*/
+            text-align: center;
+            font-weight: bold;
+            font-size: var(--md);
+        }
+        .shp_cart_articles_object img:nth-child(4):hover{
+            cursor: pointer;
+        }
+        /*Separator*/
+        .shp_car_separator{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        /*Media*/
+        @media (max-width: 640px){
+            .shp_cart{
+                --content-width: 100%;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <aside class="shp_cart">
+            <div class="shp_cart_head">
+                <img src="icons/flechita.svg" alt="">
+                <p>Shopping cart</p>
+            </div>
+            <div class="shp_car_separator">
+                <div class="shp_cart_articles">
+                    <div class="shp_cart_articles_object">
+                        <figure class="shp_cart_articles_object_img">
+                            <img src="https://i.ibb.co/JBDGtGq/Rick.jpg" alt="">
+                        </figure>
+                        <p>Rick's NTF</p>
+                        <p>$1.5 M</p>
+                        <img src="icons/icon_close.png" alt="" class="shp_cart_artciles_object_close">
+                    </div>
+                    
+                    <div class="shp_cart_articles_object">
+                        <figure class="shp_cart_articles_object_img">
+                            <img src="https://i.ibb.co/JBDGtGq/Rick.jpg" alt="">
+                        </figure>
+                        <p>Rick's NTF</p>
+                        <p>$1.5 M</p>
+                        <img src="icons/icon_close.png" alt="" class="shp_cart_artciles_object_close">
+                    </div>
+    
+                    <div class="shp_cart_articles_object">
+                        <figure class="shp_cart_articles_object_img">
+                            <img src="https://i.ibb.co/JBDGtGq/Rick.jpg" alt="">
+                        </figure>
+                        <p>Rick's NTF</p>
+                        <p>$1.5 M</p>
+                        <img src="icons/icon_close.png" alt="" class="shp_cart_artciles_object_close">
+                    </div>
+    
+                    <div class="shp_cart_articles_object">
+                        <figure class="shp_cart_articles_object_img">
+                            <img src="https://i.ibb.co/JBDGtGq/Rick.jpg" alt="">
+                        </figure>
+                        <p>Rick's NTF</p>
+                        <p>$1.5 M</p>
+                        <img src="icons/icon_close.png" alt="" class="shp_cart_artciles_object_close">
+                    </div>
+    
+                </div>
+                
+                <div class="shp_cart_footer">
+                    <div class="shp_cart_footer_data">
+                        <div>
+                            <p>Total</p>
+                        </div>
+                        <div>
+                            <p>$6.00 M</p>
+                        </div>       
+                    </div>
+                    <button class="primary_button button shp_cart_footer_button">
+                        Checkout
+                    </button>
+                </div>
+            </div>
+    </aside>
+</body>
+</html>
