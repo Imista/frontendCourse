@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <!--Styles-->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 24px;
+            border-bottom: 1px solid var(--very-light-pink);
+        }
+        .nav_menu{
+            display: none;
+        }
+        .nav_left_item,.nav_right_item{
+            /*List*/
+            list-style: none;
+            /*Box*/
+            padding: 0;
+            margin: 0;
+            height: 60px;
+            /*Display*/
+            display: flex;
+            align-items: center;
+        }
+        /*Left*/
+        .nav_left{
+            display: flex;
+        }
+        .nav_left_logo{
+            width: 100px;
+        }
+        .nav_left_item{
+            margin-left: 12px;
+        }
+        .nav_left_item li a{
+            /*Text*/
+            text-decoration: none;
+            color: var(--very-light-pink);
+            /*Box*/
+            border: 1px solid var(--white);
+            border-radius: 8px;
+            padding: 8px;
+        }
+        .nav_left_item li a:hover{
+            color: var(--hospital-green);
+            border: 1px solid var(--hospital-green);
+        }
+        /*Left*/
+        .nav_right{
+            display: flex;
+        }
+        .nav_right_item_email{
+            color: var(--very-light-pink);
+            font: var(--sm);
+            margin-right: 12px;
+        }
+        .nav_right_item_car{
+            position: relative;
+        }
+        .nav_right_item_car div{
+            /*Box*/
+            width: 20px;
+            height: 20px;
+            background-color: var(--hospital-green);
+            border-radius: 50%;
+            /*Text*/
+            text-align: center;
+            font-size: var(--sm);
+            font-weight: bold;
+            /*Position*/
+            position: absolute;
+            top: -8px;
+            right: -8px;
+        }
+        /*Media*/
+        @media (max-width: 780px){
+            .nav_menu{
+                display: block;
+            }
+            .nav_left_item{
+                display: none;
+            }
+            .nav_right_item_email{
+                display: none;
+            }
+        }
+        </style>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <img src="icons/icon_menu.svg" alt="" class="nav_menu">
+        <div class="nav_left">
+            <img src="logos/logo_yard_sale.svg" alt="" class="nav_left_logo">
+            <ul class="nav_left_item">
+                <li>
+                    <a href="/">All</a>
+                </li>
+                <li>
+                    <a href="/">Clothes</a>
+                </li>
+                <li>
+                    <a href="/">Electronics</a>
+                </li>
+                <li>
+                    <a href="/">Furnitures</a>
+                </li>
+                <li>
+                    <a href="/">Toys</a>
+                </li>
+                <li>
+                    <a href="/">Others</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav_right">
+            <ul class="nav_right_item">
+                <li class="nav_right_item_email">
+                    example@gmail.com
+                </li>
+                <li class="nav_right_item_car">
+                    <img src="icons/icon_shopping_cart.svg" alt="">
+                    <div>5</div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
