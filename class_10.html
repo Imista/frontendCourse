@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <!--Styles-->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /*Button*/
+        .button{
+            /*Box*/
+            border-radius: 8px;
+            width: 100%;
+            height: 52px;
+            margin-bottom: 32px;
+            /*Cursor*/
+            cursor: pointer;
+            /*Text*/
+            font-size: var(--md);
+            font-weight: bold;
+        }
+        .primary_button{
+            /*Box*/
+            background-color: var(--hospital-green);
+            border: none;
+            color: var(--white);
+        }
+        .prt_detail_info_button{
+            /*Display*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /*Product*/
+        .prt_detail{
+            --content-width: 360px;
+            width: var(--content-width);
+            /*Position*/
+            position: absolute;
+            right: 0;
+        }
+        .prt_detail_close{
+            /*Box*/
+            background-color: var(--white);
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            padding: 12px;
+            /*Position*/
+            z-index: 2;
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            /*Display*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .prt_detail_close:hover{
+            cursor: pointer;
+        }
+        .prt_detail_img{
+            /*Box*/
+            width: 100%;
+            height: var(--content-width);
+            object-fit: cover;
+            border-radius: 0 0 20px 20px;
+        }
+        .prt_detail_info{
+            /*Box*/
+            margin: 24px 24px 0 24px;
+            /*Text*/
+            
+            /*Display*/
+        }
+        .prt_detail_info p:nth-child(1){
+            /*Text*/
+            font-weight: bold;
+            font-size: var(--md);
+            /*Box*/
+            margin-top: 0px;
+            margin-bottom: 4px;
+        }
+        .prt_detail_info p:nth-child(2){
+            /*Text*/
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            /*Box*/
+            margin-top: 0;
+            margin-bottom: 36px;
+        }
+        .prt_detail_info p:nth-child(3){
+            /*Text*/
+            color: var(--black);
+            font-size: var(--sm);
+            /*Box*/
+            margin-top: 0;
+            margin-bottom: 36px;
+        }
+        /*Media*/
+        @media (max-width: 640px){
+            .prt_detail{
+                --content-width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            .prt_detail_info{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <aside class="prt_detail">
+        <div>
+            <div class="prt_detail_close">
+                <img src="icons/icon_close.png" alt="" >
+            </div>
+            <img src="https://i.ibb.co/JBDGtGq/Rick.jpg" alt="" class="prt_detail_img">
+        </div>
+        
+        <div class="prt_detail_info">
+            <div>
+                <p>$1.5 M</p>
+                <p>Rick's NTF</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quis quae explicabo dolore eveniet magnam totam repudiandae unde tenetur eius. Quam ipsa possimus facere sed! Assumenda voluptatibus harum saepe vel?</p>
+            </div>
+            <div>
+                <button class="primary_button button prt_detail_info_button">
+                    <img src="icons/bt_add_to_cart.svg" alt="">Add to cart
+                </button>
+            </div>
+        </div>
+    </aside>
+</body>
+</html>
